@@ -6,10 +6,10 @@ credits to : Dimas Restu H (<dimas.restu@student.upi.edu>)
 Aditya Kurniawan <aditya.kurniawan.95@gmail.com>
 
 **Includes Prequisities:**
-JDK ver. 1.8
-Apache Ant ver. 1.9.8
-Apache Maven ver. 3.5.3
-Apache ActiveMQ ver. 5.14.5
+- JDK ver. 1.8
+- Apache Ant ver. 1.9.8
+- Apache Maven ver. 3.5.3
+- Apache ActiveMQ ver. 5.14.5
 
 **How to pull this image:**
 
