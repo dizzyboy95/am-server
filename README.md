@@ -10,7 +10,3 @@ Aditya Kurniawan <aditya.kurniawan.95@gmail.com>
 - Apache Ant ver. 1.9.8
 - Apache Maven ver. 3.5.3
 - Apache ActiveMQ ver. 5.14.5
-
-**How to pull this image:**
-
-> docker pull dizzyboy95/am-server:latest
