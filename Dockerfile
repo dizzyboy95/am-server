@@ -16,18 +16,8 @@ RUN \
   add-apt-repository -y ppa:webupd8team/java && \
   apt-get update && \
   apt-get install -y oracle-java8-installer
-#   rm -rf /var/lib/apt/lists/* && \
-#   rm -rf /var/cache/oracle-jdk8-installer
 
-
-# Define working directory.
-#WORKDIR /data
-
-# Define commonly used JAVA_HOME variable
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
-
-# Define default command.
-#CMD ["bash"]
 #------JDK 1.8------#
 
 
@@ -74,8 +64,6 @@ ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 COPY mvn-entrypoint.sh /usr/local/bin/mvn-entrypoint.sh
 COPY settings-docker.xml /usr/share/maven/ref/
 RUN chmod +x /usr/local/bin/mvn-entrypoint.sh
-
-#ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
 #------APACHE MAVEN------#
 
 
@@ -92,13 +80,7 @@ RUN set -x && \
     useradd -r -M -d $ACTIVEMQ_HOME activemq && \
     chown -R activemq:activemq /opt/$ACTIVEMQ && \
     chown -h activemq:activemq $ACTIVEMQ_HOME
-
-#USER activemq
-
-#WORKDIR $ACTIVEMQ_HOME
 EXPOSE $ACTIVEMQ_TCP $ACTIVEMQ_AMQP $ACTIVEMQ_STOMP $ACTIVEMQ_MQTT $ACTIVEMQ_WS $ACTIVEMQ_UI
-
-#CMD ["/bin/sh", "-c", "bin/activemq console"]
 #------APACHE ACTIVEMQ------#
 
 COPY entrypoint.sh /entrypoint.sh
